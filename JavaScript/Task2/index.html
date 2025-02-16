@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabetize String</title>
+</head>
+<body>
+    <h2>Alphabetize a String</h2>
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString">
+    <button onclick="alphabetize()">Sort</button>
+    <p>Sorted String: <span id="result"></span></p>
+
+    <script>
+        function alphabetize() {
+            let str = document.getElementById("inputString").value;
+            let sortedStr = str.split('').sort().join('');
+            document.getElementById("result").textContent = sortedStr;
+        }
+    </script>
+</body>
+</html>

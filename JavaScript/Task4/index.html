@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date and Time Display</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px 0;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #dateDisplay, #timeDisplay {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <button id="showDate">show date</button>
+  <div id="dateDisplay"></div>
+  
+  <button id="showTime">show Time</button>
+  <div id="timeDisplay"></div>
+
+  <script>
+    document.getElementById('showDate').addEventListener('click', function() {
+      const now = new Date();
+      const day = now.getDate();
+      const month = now.toLocaleString('en-US', { month: 'long' });
+      const year = now.getFullYear();
+      
+      document.getElementById('dateDisplay').textContent = 
+        `${day}/${month}/${year}`;
+    });
+
+    document.getElementById('showTime').addEventListener('click', function() {
+      const now = new Date();
+      const options = { 
+        weekday: 'short',
+        month: 'short',
+        day: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        timeZoneName: 'short'
+      };
+      
+      const formatter = new Intl.DateTimeFormat('en-US', options);
+      const timeString = formatter.format(now);
+      
+      // Convert to format similar to the example
+      const parts = timeString.split(', ');
+      const datePart = parts[0] + ' ' + parts[1].split(' ')[0] + ' ' + parts[1].split(' ')[1];
+      const timePart = parts[2];
+      const timeZonePart = parts[3];
+      
+      document.getElementById('timeDisplay').textContent = 
+        `${datePart} ${timePart} (${timeZonePart})`;
+    });
+  </script>
+</body>
+</html>

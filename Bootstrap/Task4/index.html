@@ -1,0 +1,133 @@
+<!-- Avichal Dwivedi , 22BCE10940 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Portfolio Cards</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">MATERIAL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="#" class="nav-link">MATERIAL</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">CARDS</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">LINK</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="display-4 mb-3">Material Design Cards</h1>
+            <p class="lead text-muted">
+                Cards for display in portfolio style<br>
+                Material design by Google
+            </p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4  justify-content-center d-flex flex-wrap">
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm card-hover">
+                    <img src="/Bootstrap/Task4/Card Images.png" class="card-img-top" alt="Design">
+                    <div class="card-body">
+                        <h5 class="card-title">Material Design</h5>
+                        <p class="card-text text-muted">
+                            Clean and modern material design principles with smooth animations.
+                        </p>
+                        <div class="d-flex justify-content-between">
+                            <a href="#" class="btn btn-outline-primary">Demo</a>
+                            <a href="#" class="btn btn-link text-decoration-none">Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm card-hover">
+                    <img src="/Bootstrap/Task4/Card Images.png" class="card-img-top" alt="Design">
+                    <div class="card-body">
+                        <h5 class="card-title">Portfolio Style</h5>
+                        <p class="card-text text-muted">
+                            Showcase your work in a professional portfolio layout.
+                        </p>
+                        <div class="d-flex justify-content-between">
+                            <a href="#" class="btn btn-outline-primary">Demo</a>
+                            <a href="#" class="btn btn-link text-decoration-none">Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm card-hover">
+                    <img src="/Bootstrap/Task4/Card Images.png" class="card-img-top" alt="Design">
+                    <div class="card-body">
+                        <h5 class="card-title">Responsive Cards</h5>
+                        <p class="card-text text-muted">
+                            Fully responsive cards that adapt to any screen size.
+                        </p>
+                        <div class="d-flex justify-content-between">
+                            <a href="#" class="btn btn-outline-primary">Demo</a>
+                            <a href="#" class="btn btn-link text-decoration-none">Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card h-100 shadow-sm card-hover">
+                    <img src="/Bootstrap/Task4/Card Images.png" class="card-img-top" alt="Design">
+                    <div class="card-body">
+                        <h5 class="card-title">Responsive Cards</h5>
+                        <p class="card-text text-muted">
+                            Fully responsive cards that adapt to any screen size.
+                        </p>
+                        <div class="d-flex justify-content-between">
+                            <a href="#" class="btn btn-outline-primary">Demo</a>
+                            <a href="#" class="btn btn-link text-decoration-none">Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white min-vh-100">
+        <div class="container py-4 mt-auto">
+            <div class="row">
+                <div class="col-md-6 ">
+                    <h5>Material Design</h5>
+                    <p class="text-muted">Built with Bootstrap 5</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="text-white text-decoration-none me-3">LINK</a>
+                    <a href="#" class="text-white text-decoration-none">LINK</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

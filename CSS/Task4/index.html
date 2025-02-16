@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .sidenav {
+            height: 100%;
+            width: 60px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            transition: 0.3s;
+            padding-top: 20px;
+            z-index: 1;
+        }
+
+        .sidenav:hover {
+            width: 200px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+            transition: 0.2s;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+            background-color: #4CAF50;
+        }
+
+        .sidenav i {
+            margin-right: 15px;
+        }
+
+        .main {
+            margin-left: 70px;
+            padding: 20px;
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="sidenav">
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-user"></i> Profile</a>
+        <a href="#"><i class="fas fa-envelope"></i> Messages</a>
+        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+        <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+
+    <div class="main">
+        <h2>Hoverable Sidenav Buttons</h2>
+        <p>Hover over the buttons in the left side navigation to open them.</p>
+    </div>
+</body>
+</html>

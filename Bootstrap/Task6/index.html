@@ -1,0 +1,117 @@
+<!-- Avichal Dwivedi, 22BCE10940 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card shadow">
+            <div class="card-body p-4">
+              <form id="registrationForm" novalidate>
+                <!-- Name Field -->
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" required />
+                  <div class="invalid-feedback">Name is required</div>
+                </div>
+
+                <!-- Email Field -->
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    required
+                  />
+                  <div class="invalid-feedback">Email is required</div>
+                </div>
+
+                <!-- Password Field -->
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    required
+                  />
+                  <div class="invalid-feedback">Password is required</div>
+                </div>
+
+                <!-- Hobbies Section -->
+                <div class="mb-4">
+                  <label class="form-label">Hobbies</label>
+                  <select class="form-select">
+                    <option selected disabled>Select a hobby</option>
+                    <option value="reading">Reading</option>
+                    <option value="sports">Sports</option>
+                    <option value="music">Music</option>
+                  </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary w-100">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Form validation
+      (function () {
+        "use strict";
+
+        const form = document.getElementById("registrationForm");
+        const fields = ["name", "email", "password"];
+
+        form.addEventListener(
+          "submit",
+          function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+
+            // Validate all fields
+            fields.forEach((fieldId) => {
+              const field = document.getElementById(fieldId);
+              if (field.value.trim() === "") {
+                field.classList.add("is-invalid");
+              } else {
+                field.classList.remove("is-invalid");
+              }
+            });
+
+            form.classList.add("was-validated");
+          },
+          false
+        );
+
+        // Real-time validation
+        fields.forEach((fieldId) => {
+          const field = document.getElementById(fieldId);
+          field.addEventListener("input", () => {
+            if (field.value.trim() !== "") {
+              field.classList.remove("is-invalid");
+            }
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
